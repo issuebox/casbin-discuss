@@ -1,0 +1,20 @@
+## Guest Role 
+p, guest, article, read
+g, author, guest
+
+
+## Member Role
+g, member, guest
+p, member, article, create
+
+## Editor Role
+g, editor, member
+p, editor, article, update
+
+## Admin Role
+g, admin, editor
+p, admin, article, delete
+
+## 通过比较id是否相同判断是不是文章的作者
+p2, r.subData.id == r.objData.user_id,  article, delete
+
